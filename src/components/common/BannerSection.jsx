@@ -12,6 +12,7 @@ const BannerStyled = styled.div`
     text-decoration: none;
     color: #fff;
   }
+
   .banner-headtxt {
     font-size: 80px;
     margin-botton: 20px;
@@ -22,6 +23,19 @@ const BannerStyled = styled.div`
   }
   .releasedate {
     font-size: 30px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .banner-text {
+      padding: 20px 16px 0px;
+    }
+    .banner-headtxt {
+      font-size: 20px;
+    }
+    .releasedate,
+    .imdbrating {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -59,7 +73,7 @@ function BannerSection({
             </p>
           </div>
 
-          <p className="">
+          <p className="overview-text d-none d-md-block">
             <i>{overview}</i>
           </p>
         </div>
