@@ -12,6 +12,14 @@ const MovieListStyled = styled.div`
   gap: 10px;
 `;
 
+const WrapperSection = styled.div`
+  @media only screen and (max-width: 767px) {
+    .carousel .control-dots {
+      display: none;
+    }
+  }
+`;
+
 function ApiList() {
   const [movie, setMovie] = useState([]);
 
@@ -31,7 +39,7 @@ function ApiList() {
 
   console.log(movie);
   return (
-    <div>
+    <WrapperSection>
       <Carousel
         showThumbs={false}
         autoPlay={true}
@@ -76,7 +84,7 @@ function ApiList() {
           <SkeletonTemp />
         )}
       </MovieListStyled>
-    </div>
+    </WrapperSection>
   );
 }
 

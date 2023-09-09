@@ -150,7 +150,7 @@ const Label = ({
         overwrap={overwrap}
         whitespace={whitespace}
       >
-        {content}
+        {children}
       </LabelPara>
     );
 };
