@@ -57,7 +57,6 @@ function Card({
             </Label>
             <Label
               contentHeading
-              content={contentoverview}
               maxheight="52px"
               overflowy="scroll"
               overwrap="break-word"
@@ -65,7 +64,9 @@ function Card({
               fontsize="12px"
               color="#fff"
               margin="0"
-            />
+            >
+              {contentoverview}
+            </Label>
             <Label contentHeading fontsize="15px" color="#fff" margin="0">
               {contentvote}
               <svg
