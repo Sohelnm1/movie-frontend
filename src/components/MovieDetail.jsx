@@ -10,15 +10,20 @@ const WrapperStyled = styled.div`
 
   .imgpath {
     width: 70%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
   .content-wrapper {
     text-align: left;
     padding: 35px;
+    // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
   .sectionwrap {
     width: 100%;
     padding: 20px;
     top: 440px;
+
+    left: 0;
+    right: 0;
   }
   .moviedetail-wrapper {
     padding: 35px;
