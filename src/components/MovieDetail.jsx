@@ -18,10 +18,46 @@ const WrapperStyled = styled.div`
   .sectionwrap {
     width: 100%;
     padding: 20px;
-    border: 5px solid #fff;
+    top: 440px;
   }
   .moviedetail-wrapper {
     padding: 35px;
+  }
+  .bannerimg {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .imgpath {
+      width: 100%;
+    }
+    .moviedetail-wrapper,
+    .content-wrapper {
+      padding: 10px;
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    .bannerimg {
+      display: none;
+    }
+    .sectionwrap {
+      border: 5px solid #fff;
+      top: 0;
+    }
+  }
+  .imgpathbanner {
+    border-radius: 50px 0px 50px 0px;
+  }
+  @media only screen and (min-width: 1024px) {
+    .sectionwrap {
+      position: absolute;
+      flex-direction: row-reverse;
+    }
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
   }
 `;
 
@@ -46,10 +82,16 @@ function MovieDetail() {
 
   return (
     <WrapperStyled>
-      <h1> Movie Details </h1>
       {moviedetail ? (
         <>
-          <div className="container d-md-flex sectionwrap ">
+          <div className="bannerimg position-relative" key={id}>
+            <img
+              className="w-100 imgpathbanner"
+              src={`https://image.tmdb.org/t/p/original${moviedetail.backdrop_path}`}
+              alt="Card Iage"
+            />
+          </div>
+          <div className="container d-md-flex sectionwrap " key={id}>
             <div className="moviedetail-wrapper">
               <img
                 className="imgpath"
