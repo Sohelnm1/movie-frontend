@@ -29,7 +29,7 @@ const CardStyled = styled.div`
 
   @media only screen and (max-width: 767px) {
     .card-img.modified {
-      max-width: 8rem;
+      max-width: 10rem;
     }
   }
 `;
